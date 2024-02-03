@@ -13,7 +13,7 @@ In this guifde, we will build an LLM-powered chatbot named "Frosty" that perform
 Once environment is set up and secrets are configured including connection to a Snowflake environment with the relevant view, the app can be run by:
 
 ```sh
-streamlit run src/frosty_app.py
+streamlit run src/test.py
 ```
 
 ![App Demo](./assets/App_Demo.gif)
