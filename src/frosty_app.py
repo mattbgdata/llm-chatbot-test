@@ -5,13 +5,15 @@ import matplotlib.pyplot as plt
 from prompts import get_system_prompt
 
 # remove the hamburger in the upper right hand corner and the Made with Streamlit footer
-hide_menu_style = """
+hide_menu_and_header_style = """
         <style>
         #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
+        header {visibility: hidden;}
         </style>
         """
-st.markdown(hide_menu_style, unsafe_allow_html=True)
+
+st.markdown(hide_menu_and_header_style, unsafe_allow_html=True)
 
 st.title("⚡🤖⚡ G-Bot - GDATA's AI Assitant")
 
