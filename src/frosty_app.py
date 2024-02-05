@@ -4,6 +4,15 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from prompts import get_system_prompt
 
+# remove the hamburger in the upper right hand corner and the Made with Streamlit footer
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 st.title("⚡🤖⚡ G-Bot - GDATA's AI Assitant")
 
 # Initialize the chat messages history
