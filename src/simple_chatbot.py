@@ -1,7 +1,7 @@
 from openai import OpenAI
 import streamlit as st
 
-st.title("☃️ Frosty")
+st.title("☃️ Frosty2")
 
 # Initialize the chat messages history
 if "messages" not in st.session_state.keys():
@@ -14,7 +14,7 @@ if prompt := st.chat_input():
 # display the existing chat messages
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.write(message["content"])
+        st.write(message["content"])    
 
 # If last message is not from assistant, we need to generate a new response
 if st.session_state.messages[-1]["role"] != "assistant":
@@ -29,4 +29,5 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.write(response)
 
     message = {"role": "assistant", "content": response}
-    st.session_state.messages.append(message)
+    st.session_state.messages.append(message)        
+
